@@ -27,6 +27,7 @@ Session Manager provides:
 ✔ Complete audit logging
 ✔ IAM-controlled access
 
+<img width="877" height="432" alt="image" src="https://github.com/user-attachments/assets/4f7f1e21-cbe4-4e31-ae3f-e02d706e24a9" />
 
 
 
@@ -89,8 +90,14 @@ Interface Endpoints (PAID) - ENI Elastic Network Interface
 If there is no s3/dynamodb endpoints. Then we have to create NAT gateway for the private subnet which exposes for limited internet access which adds the cost. Instead we can use vpc endpoints s3/dynamodb(free).internet is not required and traffic retains within aws 
 Interface Endpoints are VPC Endpoints based on AWS PrivateLink. They cost money because they create ENIs inside your VPC and handle private communication with AWS services, unlike Gateway Endpoints which use route tables and are free.
 
+<img width="506" height="527" alt="image" src="https://github.com/user-attachments/assets/eb2f9a48-ff6a-4557-b5de-e99a45d843c1" />
 
+<img width="812" height="353" alt="image" src="https://github.com/user-attachments/assets/072530b4-a173-4ae0-9b47-bdccc5b77ba7" />
+
+ INTERFACE END points:
  
+ <img width="1702" height="517" alt="image" src="https://github.com/user-attachments/assets/0a72b84c-72e4-4d12-8e92-7b3e8aff4257" />
+
 EC2 works without Interface Endpoints.
 “Interface Endpoints are NOT needed for every EC2 or Lambda. We create them only when private subnet resources must access AWS services without internet or NAT Gateway.”
 You only create Interface Endpoints if your EC2 (especially in a private subnet) needs to access AWS services WITHOUT using a NAT Gateway or Internet Gateway, such as: SSM (Session Manager), CloudWatch Logs, CR (to download images), SQS / SNS
@@ -128,6 +135,7 @@ A Virtual Private Gateway is an AWS component that allows your on-premises netwo
 Transit gateway
 • A transit gateway is a transit hub that you can use to interconnect your VPCs and your on-premises networks. For more information, see Amazon VPC Transit Gateways. You can create a Site-to-Site VPN connection as an attachment on a transit gateway. Your Site-to-Site VPN connection on a transit gateway can support IPv4 or IPv6 traffic inside the VPN tunnels (inner IP addresses). Additionally, transit gateways support IPv6 addresses for the outer tunnel IP addresses
 
+<img width="830" height="360" alt="image" src="https://github.com/user-attachments/assets/a570012f-4196-472b-b6c2-82a241c0acd5" />
 
 
 
