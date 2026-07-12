@@ -482,12 +482,44 @@ SSH verifies and grants access
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+<img width="772" height="421" alt="image" src="https://github.com/user-attachments/assets/a824fae1-cc1f-4998-beb1-aae5668a081c" />
 
 
-<img width="1050" height="720" alt="image" src="https://github.com/user-attachments/assets/dd5f290a-18a0-4aac-9e78-57ef6f2db31e" />
+IaaS — Infrastructure as a Service
+You get: Raw compute, storage, networking — the "hardware," virtualized.
+You manage: OS, runtime, middleware, applications, data, patching, scaling.
+Provider manages: Physical servers, virtualization, networking, data centers.
+Examples:
+	• AWS EC2, S3, VPC
+	• Google Compute Engine
+	• Azure VMs
+Your world, basically: When you provision an EC2 instance and then install Docker, configure Kubernetes (EKS is a managed layer on top, more below), set up Jenkins — that's IaaS. You own everything from the OS upward.
+
+PaaS — Platform as a Service
+You get: A ready-made platform to deploy code onto — OS, runtime, and middleware are handled for you.
+You manage: Just your application code and data.
+Provider manages: OS, runtime, servers, scaling infrastructure, patching.
+Examples:
+	• AWS Elastic Beanstalk
+	• Google App Engine
+	• Azure App Service
+	• EKS control plane (AWS manages the Kubernetes control plane; you still manage worker nodes unless using Fargate, which pushes further toward PaaS),
+	• RDS (AWS manages the DB engine patching/backups, you manage schema/data)
+Practical feel: You push code (git push heroku main), and the platform builds, deploys, and runs it. No OS patching, no server provisioning.
 
 
-<img width="758" height="436" alt="image" src="https://github.com/user-attachments/assets/e6781d2b-64ce-4095-b5d8-91f332660fca" />
+SaaS — Software as a Service
+You get: A finished, ready-to-use application.
+You manage: Just your data/usage within the app — no infrastructure, no code.
+Provider manages: Everything — infrastructure, platform, application, updates.
+Examples:
+	• Gmail, Google Workspace
+	• Salesforce
+	• Slack
+	• Datadog (you use it, you don't run it)
+	• Office 365
+	• Zoom
+
 
 EC2 is IaaS because AWS provides only virtual infrastructure, while the customer manages the operating system, runtime, and applications.
 
@@ -506,6 +538,7 @@ Typical pipeline
 	6. Tag & version it
 	7. Share it with required AWS accounts
 This EC2 is then terminated.
+
 
 
 
