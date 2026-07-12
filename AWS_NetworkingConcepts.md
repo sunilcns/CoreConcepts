@@ -484,6 +484,38 @@ SSH verifies and grants access
 
 
 
+<img width="1050" height="720" alt="image" src="https://github.com/user-attachments/assets/dd5f290a-18a0-4aac-9e78-57ef6f2db31e" />
+
+
+<img width="758" height="436" alt="image" src="https://github.com/user-attachments/assets/e6781d2b-64ce-4095-b5d8-91f332660fca" />
+
+EC2 is IaaS because AWS provides only virtual infrastructure, while the customer manages the operating system, runtime, and applications.
+
+A Golden AMI is a pre-configured, pre-patched Amazon Machine Image that your organization treats as the trusted standard for launching EC2 instances. A Golden AMI is a standardized, secure, and pre-patched Amazon Machine Image used to ensure consistency, security, and compliance when launching EC2 instances. It also contains the antivirus, certain ports blocked or opened, certain pre installed softwares.
+
+How a Golden AMI is usually created (step-by-step)
+Typical pipeline
+	1. Start with Base AMI (e.g., Amazon Linux 2023)
+	2. Launch a temporary EC2
+	3. Apply:
+		○ OS patches
+		○ Security hardening
+		○ Required agents
+	4. Run validation scripts
+	5. Create an AMI from this instance
+	6. Tag & version it
+	7. Share it with required AWS accounts
+This EC2 is then terminated.
+
+
+
+<img width="1702" height="913" alt="image" src="https://github.com/user-attachments/assets/9ba50ffe-5e89-4e7c-a1f3-7279fb204738" />
+
+<img width="1187" height="581" alt="image" src="https://github.com/user-attachments/assets/4e3deb7e-2965-4fc1-83b2-0d009d99f984" />
+
+
+
+
 
 
 
