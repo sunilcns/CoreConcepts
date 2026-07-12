@@ -548,6 +548,7 @@ This EC2 is then terminated.
 
 
 
+<img width="852" height="267" alt="image" src="https://github.com/user-attachments/assets/faf87948-73ab-4934-82c5-1324f79e25d9" />
 
 
 
